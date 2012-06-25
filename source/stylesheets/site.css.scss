@@ -1,0 +1,95 @@
+// Import our partials ----------------------------------------------------------
+
+@import "partials/common";
+@import "partials/reset";
+
+// Now set up the site ----------------------------------------------------------
+
+body {
+  color:$white;
+  font:93.8%/1.6 $nimbus_sans;
+  *font-size:small;
+  font-weight:400;
+}
+
+// Links
+
+a:hover, a:active {
+  border-bottom:2px solid shade($base_color,30%); 
+  outline: none; 
+}
+a, a:active { 
+  color:$base_color;
+  cursor:pointer;
+  text-decoration:none;
+  @include transition(0.3s ease all);
+}
+a:hover { 
+  color:shade($base_color,30%);
+  text-decoration:none; 
+}
+a:link  { 
+  -webkit-tap-highlight-color:$base_color;
+}
+
+// Typekit loading elements --------------------------------------------------------------------
+
+.wf-loading h1, 
+.wf-loading h2, 
+.wf-loading h3, 
+.wf-loading p,
+.wf-loading .button,
+.wf-loading .button>span {
+  opacity: 0;
+}
+.ie.wf-loading h1, 
+.ie.wf-loading h2, 
+.ie.wf-loading h3, 
+.ie.wf-loading p {
+  visibility:hidden;
+}
+.wf-active h1, 
+.wf-active h2, 
+.wf-active h3, 
+.wf-active p, 
+.wf-active nav li,
+.wf-active .button>span {
+  opacity: 1;
+  visibility: visible;
+  @include transition(opacity 0.24s ease-in-out);
+}
+.wf-active .button {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Base layout styles --------------------------------------------------------------------------
+
+html {
+  background-color:$base_color;
+  height:101%;
+  width:100%;
+}
+body {
+  height:100%;
+  width:100%;
+}
+#main {
+  background-color:$white;
+  margin:0 auto;
+  padding:0 30px;
+  > .container {
+    margin:0 auto;
+    max-width:1200px;
+  }
+}
+#clock {
+  left:50%;
+  position:absolute;
+  top:50%;
+  > span {
+    display:inline-block;
+    font-size:8.667em;
+    font-weight:700;
+  }
+}
