@@ -1,21 +1,24 @@
 $(function() {
-  var currentDate = new Date();
+
+  // Set up the countdown timer
   
-  $('#clock').countdown(369 * 24 * 60 * 60 * 1000 + currentDate.valueOf(), function(event) {
-    $this = $(this);
-    switch(event.type) {
-      case "seconds":
-      case "minutes":
-      case "hours":
-      case "days":
-      case "weeks":
-      case "daysLeft":
-        $this.find('span#'+event.type).html(event.value);
-        break;
-      case "finished":
-        $this.fadeTo('slow', .5);
-        break;
-    }
+  var currentDate = new Date();
+
+  var austDay = new Date();
+  austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+  $('#clock').countdown({until: austDay});
+  $('#year').text(austDay.getFullYear());
+
+  // Position the countdown clock
+
+  /*
+  var horPosition = $('#clock').outerWidth();
+  var verPosition = $('#clock').outerHeight();
+
+  $('#clock').css({
+    'margin-left':-horPosition/2,
+    'margin-top':-verPosition/2
   });
+*/
   
 });
