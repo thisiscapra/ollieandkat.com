@@ -91,9 +91,7 @@ body {
   background-color:rgba($green, 0.9);
   color:$white;
   padding:20px;
-  position:relative;
-  z-index:100;
-  @include border-radius(5px);
+  border-radius:5px;
   &:after {
     top: 100%;
     border: solid transparent;
@@ -142,33 +140,16 @@ body {
     background-color:$white;
     color:$green;
     display:block;
-    font-size:1.600em;
+    font-size:1.6em;
     font-weight:700;
     text-align:center;
     text-transform:uppercase;
     text-decoration:none;
     padding:5px 0;
-    @include border-radius(3px);
+    border-radius:3px;
     &:hover {
       background-color:$dark_grey;
       color:$white;
-      text-decoration:none;
-    }
-  }
-  > .close {
-    background-color:#00aeef;
-    color:$white;
-    height:25px;
-    font-weight:500;
-    line-height:23px;
-    position:absolute;
-    right:-10px;
-    text-align:center;
-    top:-10px;
-    width:25px;
-    @include border-radius(25px);
-    &:hover {
-      background-color:$dark_grey;
       text-decoration:none;
     }
   }
