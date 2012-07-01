@@ -22,11 +22,13 @@ $(function() {
       map.setOptions({ 
         draggable: false,
         disableDefaultUI: true,
-        zoom: 5,
+        zoom: 5
       });
       offsetCenter(mapCenter,0,-120);
     } else {
-      offsetCenter(mapCenter,0,-150);
+      setTimeout(function() { 
+        offsetCenter(mapCenter,0,-150);
+      }, 200);
     }
 
     marker = new RichMarker({
@@ -40,9 +42,10 @@ $(function() {
     function offsetCenter(latlng,offsetx,offsety) {
 
       var scale = Math.pow(2, map.getZoom());
+
       var nw = new google.maps.LatLng(
-          map.getBounds().getNorthEast().lat(),
-          map.getBounds().getSouthWest().lng()
+        map.getBounds().getNorthEast().lat(),
+        map.getBounds().getSouthWest().lng()
       );
 
       var worldCoordinateCenter = map.getProjection().fromLatLngToPoint(latlng);
