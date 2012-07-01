@@ -15,21 +15,21 @@ body {
 // Links
 
 a:hover, a:active {
-  border-bottom:2px solid shade($base_color,30%); 
+  text-decoration:none;
   outline: none; 
 }
 a, a:active { 
-  color:$base_color;
+  color:$green;
   cursor:pointer;
   text-decoration:none;
   @include transition(0.3s ease all);
 }
 a:hover { 
-  color:shade($base_color,30%);
+  color:shade($green,30%);
   text-decoration:none; 
 }
 a:link  { 
-  -webkit-tap-highlight-color:$base_color;
+  -webkit-tap-highlight-color:$green;
 }
 
 // Typekit loading elements --------------------------------------------------------------------
@@ -66,7 +66,7 @@ a:link  {
 // Base layout styles --------------------------------------------------------------------------
 
 html {
-  background-color:$base_color;
+  background-color:$white;
   height:100%;
   width:100%;
 }
@@ -74,55 +74,134 @@ body {
   height:100%;
   width:100%;
 }
-h1 {
-  font-size:2.4em;
-  line-height:1;
-  text-transform:uppercase;
-}
 #main {
   background-color:$white;
   height:100%;
   margin:0 auto;
+  position:relative;
   width:100%;
-  > .container {
-    margin:0 auto;
-    max-width:1200px;
-  }
 }
 #map {
   height:100%;
   position:relative;
   width:100%;
 }
-#overlay {
-  background-color:rgba(51,192,104,0.9);
-  height:100%;
-  left:0;
-  position:absolute;
-  top:0;
-  width:100%;
-  > #clock_holder {
-    background-color:rgba($white, 0.6);
-    color:$dark_grey;
-    left:50%;
-    margin:-220px 0 0 -260px;
-    padding:20px;
+#clock_holder {
+  background-color:$green;
+  background-color:rgba($green, 0.9);
+  color:$white;
+  padding:20px;
+  position:relative;
+  z-index:100;
+  @include border-radius(5px);
+  &:after {
+    top: 100%;
+    border: solid transparent;
+    border-top-color: rgba($green, 0.9);
+    border-width: 10px;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    margin-left: -10px;
+  }
+  > header > h1 {
+    font-size:2.733em;
+    font-weight:700;
+    line-height:1;
+    margin-bottom:0.2em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  > time {
+    color:shade($green, 20%);
+    display:block;
+    font-size:3.867em;
+    font-weight:700;
+    line-height:normal;
+    text-transform:uppercase;
+    white-space:nowrap;
+    > span {
+      color:$dark_grey;
+      display:block;
+      font-size:4.688em;
+      letter-spacing:-10px;
+      line-height:0.7;
+      left:-10px;
+      margin-right:-10px;
+      position:relative;
+    }
+    > b {
+      font-weight:700;
+      letter-spacing:-4px;
+    }
+  }
+  > .button {
+    background-color:#00aeef;
+    color:$white;
+    display:block;
+    font-size:1.600em;
+    font-weight:700;
+    text-align:center;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:5px 0;
+    @include border-radius(3px);
+    &:hover {
+      background-color:$dark_grey;
+      text-decoration:none;
+    }
+  }
+  > .close {
+    background-color:#00aeef;
+    color:$white;
+    height:25px;
+    font-weight:500;
+    line-height:23px;
     position:absolute;
-    top:50%;
-    z-index:100;
-    @include border-radius(5px);
-    &:after {
-      top: 100%;
-      border: solid transparent;
-      border-top-color: rgba($white, 0.6);
-      border-width: 10px;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      left: 50%;
-      margin-left: -10px;
+    right:-10px;
+    text-align:center;
+    top:-10px;
+    width:25px;
+    @include border-radius(25px);
+    &:hover {
+      background-color:$dark_grey;
+      text-decoration:none;
+    }
+  }
+}
+
+@-webkit-keyframes reset { 0% { opacity:0; } 100% { opacity:0; } }
+@-webkit-keyframes fade-in { 0% { opacity:0; } 60% { opacity:0; } 100% { opacity:1; } }
+@-moz-keyframes reset { 0% { opacity:0; } 100% { opacity:0; } }
+@-moz-keyframes fade-in { 0% { opacity:0; } 60% { opacity:0; } 100% { opacity:1; } }
+@-ms-keyframes reset { 0% { opacity:0; } 100% { opacity:0; } }
+@-ms-keyframes fade-in { 0% { opacity:0; } 60% { opacity:0; } 100% { opacity:1; } }
+#map{ -webkit-animation-name:reset,fade-in; -webkit-animation-timing-function:ease-in; -webkit-animation-iteration-count:1;
+  -moz-animation-name:reset,fade-in; -moz-animation-timing-function:ease-in; -moz-animation-iteration-count:1;
+    -ms-animation-name:reset,fade-in; -ms-animation-timing-function:ease-in; -ms-animation-iteration-count:1;
+   }
+#map { -webkit-animation-delay:0; -webkit-animation-duration:1.5s;
+  -moz-animation-delay:0; -moz-animation-duration:1.5s;
+  -ms-animation-delay:0; -ms-animation-duration:1.5s;
+ }
+
+@media screen and (max-device-width: 480px) { 
+  #clock_holder {
+    > header > h1 {
+      font-size:2em;
+    }
+    > time {
+      font-size:2.8em;
+      > span {
+        left:-8px;
+        letter-spacing:-6px;
+      }
+    }
+    > .button {
+      font-size:1.2em;
     }
   }
 }
