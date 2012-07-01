@@ -138,16 +138,16 @@ button {
   zoom: 1;
 }
 ::-moz-selection {
-  background:$base_color;
+  background:$green;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background:$base_color;
+  background:$green;
   color: #fff;
   text-shadow: none;
 }
 // j.mp/webkit-tap-highlight-color
 a:link {
-  -webkit-tap-highlight-color: $base_color;
+  -webkit-tap-highlight-color: $green;
 }
