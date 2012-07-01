@@ -116,7 +116,7 @@ body {
     white-space:nowrap;
   }
   > time {
-    color:shade($green, 20%);
+    color:shade($green, 30%);
     display:block;
     font-size:3.867em;
     font-weight:700;
@@ -139,8 +139,8 @@ body {
     }
   }
   > .button {
-    background-color:#00aeef;
-    color:$white;
+    background-color:$white;
+    color:$green;
     display:block;
     font-size:1.600em;
     font-weight:700;
@@ -151,6 +151,7 @@ body {
     @include border-radius(3px);
     &:hover {
       background-color:$dark_grey;
+      color:$white;
       text-decoration:none;
     }
   }
@@ -190,18 +191,19 @@ body {
 
 @media screen and (max-device-width: 480px) { 
   #clock_holder {
+    margin-top:-10px;
     > header > h1 {
-      font-size:2em;
+      font-size:1.5em;
     }
     > time {
-      font-size:2.8em;
+      font-size:2.2em;
       > span {
-        left:-8px;
+        left:-7px;
         letter-spacing:-6px;
       }
     }
     > .button {
-      font-size:1.2em;
+      font-size:1em;
     }
   }
 }
