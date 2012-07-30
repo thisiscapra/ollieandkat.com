@@ -36,7 +36,7 @@ $(function() {
       map: map,
       draggable: false,
       shadow: false,
-      content: '<section id="clock_holder"><header><h1>Save the date</h1></header><time datetime="2013-7-29T12:00Z"><span>29</span>June 2<b>013</b></time><a class="button" href="webcal://dev.ollieandkat.com/files/iCal-20120701-103114.ics">Add to calendar</a></section>'
+      content: '<section id="clock_holder"><header><h1>Save the date</h1></header><time datetime="2013-7-29T12:00Z"><span>29</span>June 2<b>013</b></time><a class="button" href="webcal://www.ollieandkat.com/files/iCal-20120701-103114.ics">Add to calendar</a></section>'
     });
 
     function offsetCenter(latlng,offsetx,offsety) {
