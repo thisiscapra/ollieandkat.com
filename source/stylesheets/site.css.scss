@@ -6,10 +6,21 @@
 // Now set up the site ----------------------------------------------------------
 
 body {
-  color:$white;
-  font:93.8%/1.6 $nimbus_sans;
+  color:$black;
+  font:112.5%/1.6 $kulturista;
   *font-size:small;
   font-weight:400;
+  text-align:center;
+}
+
+// Typography
+
+h1,h2,h3,h4 {
+  font-family:$brandon;
+  font-weight:900;
+  font-size:1.778em;
+  letter-spacing:6px;
+  text-transform:uppercase;
 }
 
 // Links
@@ -74,118 +85,60 @@ body {
   height:100%;
   width:100%;
 }
-#main {
-  background-color:$white;
-  height:100%;
-  margin:0 auto;
-  position:relative;
-  width:100%;
-}
-#map {
-  height:100%;
-  position:relative;
-  width:100%;
-}
-#clock_holder {
-  background-color:$green;
-  background-color:rgba($green, 0.9);
+
+// Header --------------------------------------------------------------------------------------
+
+#header {
+  background:image-url("header_background.jpg") no-repeat top center;
+  background-size:cover;
   color:$white;
-  padding:20px;
-  border-radius:5px;
-  &:after {
-    top: 100%;
-    border: solid transparent;
-    border-top-color: rgba($green, 0.9);
-    border-width: 10px;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    left: 50%;
-    margin-left: -10px;
+  height:100%;
+  overflow:hidden;
+  width:100%;
+  > p {
+    font-size:1.333em;
   }
-  > header > h1 {
-    font-size:2.733em;
-    font-weight:700;
-    line-height:1;
-    margin-bottom:0.2em;
-    text-transform:uppercase;
-    white-space:nowrap;
-  }
-  > time {
-    color:shade($green, 30%);
-    display:block;
-    font-size:3.867em;
-    font-weight:700;
-    line-height:normal;
-    text-transform:uppercase;
-    white-space:nowrap;
+  h1 {
     > span {
-      color:$dark_grey;
+      background:image-url("logo.png") no-repeat top center;
       display:block;
-      font-size:4.688em;
-      letter-spacing:-10px;
-      line-height:0.7;
-      left:-10px;
-      margin-right:-10px;
-      position:relative;
-    }
-    > b {
-      font-weight:700;
-      letter-spacing:-4px;
+      height:204px;
+      margin:15% auto 1.5em;
+      text-indent:-99999px;
+      width:276px;
     }
   }
-  > .button {
-    background-color:$white;
-    color:$green;
-    display:block;
-    font-size:1.6em;
+  > nav {
+    background:$white image-url("nav_logo.png") no-repeat 50% 20px;
+    font-family:$brandon;
     font-weight:700;
-    text-align:center;
+    left:0;
+    letter-spacing:2px;
+    padding:1.2em 0;
+    position:fixed;
     text-transform:uppercase;
-    text-decoration:none;
-    padding:5px 0;
-    border-radius:3px;
-    &:hover {
-      background-color:$dark_grey;
-      color:$white;
-      text-decoration:none;
-    }
-  }
-}
-
-@-webkit-keyframes reset { 0% { opacity:0; } 100% { opacity:0; } }
-@-webkit-keyframes fade-in { 0% { opacity:0; } 60% { opacity:0; } 100% { opacity:1; } }
-@-moz-keyframes reset { 0% { opacity:0; } 100% { opacity:0; } }
-@-moz-keyframes fade-in { 0% { opacity:0; } 60% { opacity:0; } 100% { opacity:1; } }
-@-ms-keyframes reset { 0% { opacity:0; } 100% { opacity:0; } }
-@-ms-keyframes fade-in { 0% { opacity:0; } 60% { opacity:0; } 100% { opacity:1; } }
-#map{ -webkit-animation-name:reset,fade-in; -webkit-animation-timing-function:ease-in; -webkit-animation-iteration-count:1;
-  -moz-animation-name:reset,fade-in; -moz-animation-timing-function:ease-in; -moz-animation-iteration-count:1;
-    -ms-animation-name:reset,fade-in; -ms-animation-timing-function:ease-in; -ms-animation-iteration-count:1;
-   }
-#map { -webkit-animation-delay:0; -webkit-animation-duration:1.5s;
-  -moz-animation-delay:0; -moz-animation-duration:1.5s;
-  -ms-animation-delay:0; -ms-animation-duration:1.5s;
- }
-
-@media screen and (max-device-width: 480px) { 
-  #clock_holder {
-    margin-top:-10px;
-    > header > h1 {
-      font-size:1.5em;
-    }
-    > time {
-      font-size:2.2em;
-      > span {
-        left:-7px;
-        letter-spacing:-6px;
+    top:0;
+    width:100%;
+    > ul {
+      > li {
+        display:inline;
+        margin-right:100px;
+        &:nth-child(2) {
+          margin-right:200px;
+        }
+        &:last-child {
+          margin-right:0;
+        }
+        > a:hover,&.active {
+          color:$black;
+        }
       }
     }
-    > .button {
-      font-size:1em;
-      padding:3px 0;
-    }
   }
+}
+
+// Main content -------------------------------------------------------
+
+section {
+  padding:5em 0;
 }

@@ -1,4 +1,60 @@
 - content_for :head do
   %title Save the date! Ollie and Kat are getting married.
 
-#map
+%header#header
+  %nav
+    %ul
+      %li=link_to("Home","#header")
+      %li=link_to("About","#about")
+      %li=link_to("Info","#info")
+      %li=link_to("RSVP","#rsvp")
+  %h1 
+    %span Ollie and Kat 
+    are getting married
+  %p Saturday 29th June 2013
+
+%section#about
+  %h2 About us
+  =image_tag("kat_ollie.jpg", :alt => "")
+  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. 
+
+%section#info
+  %h2 Wedding information
+  %ul
+    %li
+      =image_tag("clock_one.png", :alt => "")
+      %h3 1pm
+      %p Exhange of vows
+      %span Dress: Lake chic
+    %li
+      =image_tag("clock_two.png", :alt => "")
+      %h3 2pm
+      %p BBQ & Cottage Games
+      %span Dress: bring swimwear
+    %li
+      =image_tag("clock_three.png", :alt => "")
+      %h3 6pm +
+      %p Lake cottage party
+      %span Dress: dancing gear
+  %address
+    51 Chemin Des Sables<br/>
+    Val-des-Monts<br/>
+    Canada
+  %p The ceremony will be held on the dock overlooking the lake. Following this we will have a cottage BBQ with various games. Make sure you bring your swimwear so you can enjoy the lake. We will have music and a fire running in the evening. The lake area can get a bit chilly later on so bring a sweater or jacket if you need it.
+  
+  %p We will not be asking for gifts as we have asked everyone to travel so far and we are so grateful for you coming along.
+
+%section#rsvp
+  %h2 RSVP
+  %p 
+    To access the RSVP area please use the code that came with your wedding invites. If you didn’t receive one please email 
+    =link_to("info@ollieandkat.com", "mailto:info@ollieandkat.com")
+
+%footer#footer
+  %p 
+    Copyright © 2013 Ollie & Kat.<br/>
+    For any further information contact us at 
+    =link_to("info@ollieandkat.com", "mailto:info@ollieandkat.com")
+
+
+
