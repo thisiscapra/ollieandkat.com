@@ -46,6 +46,9 @@ h1,h2 {
 }
 p {
   margin-bottom:1.5em;
+  > span {
+    color:$white;
+  }
 }
 
 // Links
@@ -135,7 +138,9 @@ body {
       background:image-url("logo.png") no-repeat top center;
       display:block;
       height:204px;
+      left:-4px;
       margin:15% auto 1em;
+      position:relative;
       text-indent:-99999px;
       width:276px;
     }
@@ -166,7 +171,7 @@ body {
         &:last-child {
           margin-right:0;
         }
-        > a:hover,a.active {
+        > a:hover,&.active > a {
           color:$black;
         }
       }
@@ -187,6 +192,9 @@ footer#footer {
   padding:5em 10px;
   > p {
     color:$mid_grey;
+    margin:0 auto 1.5em;
+    max-width:400px;
+    width:100%;
   }
 }
 
@@ -267,6 +275,47 @@ section {
 
 // Media Queries ---------------------------------------------
 
+@media only screen and (max-width:582px) {
+  section {
+    padding:5em 1em;
+  }
+  .column {
+    max-width:100%;
+    width:100%;
+  }
+  #header {
+    > nav {
+      > ul {
+        margin-left:-10px;
+        > li {
+          font-size:0.833em;
+          margin-right:2em;
+          &:nth-child(2) {
+            margin-right:5em !important;
+          }
+        }
+      }
+    }
+    h1 {
+      > span {
+        margin:35% auto 1em;
+      }
+    }
+  }
+  #info {
+    > ul {
+      > li {
+        display:block;
+        margin-bottom:3em;
+        width:100%;
+        > img {
+          margin-bottom:1em;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-device-width: 480px) {
   section {
     padding:5em 1em;
@@ -297,9 +346,6 @@ section {
         margin:35% auto 1em;
         width:180px;
       }
-      &:after {
-        background-color:$white;
-      }
     }
   }
   #info {
@@ -312,6 +358,21 @@ section {
           margin-bottom:1em;
         }
       }
+    }
+  }
+}
+
+// IE specific styles -----------------------------------------------
+
+.ie {
+  #about {
+    > img {
+      width:500px;
+    }
+  }
+  #info {
+    > ul {
+      width:650px;
     }
   }
 }
