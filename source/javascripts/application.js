@@ -1,16 +1,4 @@
 $(function(){
-  
-  $("nav a").click(function(event){
-    event.preventDefault();
-    $('nav a').removeClass('active');
-    $(this).addClass('active');
-    var full_url = this.href;
-    var parts = full_url.split("#");
-    var trgt = parts[1];
-    var target_offset = $("#"+trgt).offset();
-    var target_top = target_offset.top;
-    $('html, body').animate({scrollTop:target_top -50}, 500);
-  });
 
   var scroll_pos = 0;
   $(document).scroll(function() { 
@@ -21,6 +9,43 @@ $(function(){
     } else {
       $("nav").removeClass('active');
     }
+  });
+
+  var lastId,
+    topMenu = $("nav"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+  menuItems.click(function(e){
+    var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({ 
+      scrollTop: offsetTop + 30
+    }, 500);
+    e.preventDefault();
+  });
+
+  $(window).scroll(function(){
+    $('nav a').removeClass('active');
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    var cur = scrollItems.map(function(){
+    if ($(this).offset().top < fromTop)
+      return this;
+    });
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    if (lastId !== id) {
+      lastId = id;
+    menuItems
+      .parent().removeClass("active")
+      .end().filter("[href=#"+id+"]").parent().addClass("active");
+    }                   
   });
 
 }); 
