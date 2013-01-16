@@ -2,7 +2,7 @@ $(function(){
 
   /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
     if (!pageYOffset) window.scrollTo(0, 1);
-  }, 1000);
+  }, 200);
 
   var scroll_pos = 0;
   $(document).scroll(function() { 
