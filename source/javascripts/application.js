@@ -1,8 +1,8 @@
 $(function(){
 
-  /mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+  /*/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
     if (!pageYOffset) window.scrollTo(0, 1);
-  }, 200);
+  }, 2000);*/
 
   var scroll_pos = 0;
   $(document).scroll(function() { 
