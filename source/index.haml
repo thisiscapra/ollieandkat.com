@@ -1,12 +1,11 @@
 - content_for :head do
   %title Save the date! Ollie and Kat are getting married.
-  %description We met over 6 years ago in London, where our passion for design cemented our relationship.
 
 %header#header
   %nav
     %ul
       %li=link_to("Home","#header")
-      %li=link_to("About","#about")
+      %li.about=link_to("About","#about")
       %li=link_to("Info","#info")
       %li=link_to("RSVP","#rsvp")
   %h1 
@@ -66,25 +65,6 @@
       <div id="wufoo-z7x3p3">
       Fill out my <a href="http://ollieandkat.wufoo.com/forms/z7x3p3">online form</a>.
       </div>
-      :javascript
-        var z7x3p3;(function(d, t) {
-        var s = d.createElement(t), options = {
-        'userName':'ollieandkat', 
-        'formHash':'z7x3p3', 
-        'autoResize':true,
-        'height':'190',
-        'async':true,
-        'header':'show'};
-        //'resizeDone': resizeTheColorbox};
-        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-        s.onload = s.onreadystatechange = function() {
-        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-        try { z7x3p3 = new WufooForm();z7x3p3.initialize(options);z7x3p3.display(); } catch (e) {}};
-        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-        })(document, 'script');
-        function resizeTheColorbox() {
-          alert('resizing');
-        }
 
 %footer#footer
   =image_tag("footer_icon.png", :alt => "")
@@ -103,6 +83,3 @@
     from
     = succeed '.' do
       =link_to("Typekit", "https://typekit.com")
-
-
-
