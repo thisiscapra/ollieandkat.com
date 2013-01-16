@@ -9,11 +9,9 @@ html {
   height:100%;
   width:100%;
 }
-
 body {
   color:$black;
   font:112.5%/1.6 $kulturista;
-  *font-size:small;
   font-weight:400;
   height:100%;
   text-align:center;
@@ -165,7 +163,7 @@ body {
       > li {
         display:inline;
         margin-right:3.5em;
-        &:nth-child(2) {
+        &.about {
           margin-right:10em;
         }
         &:last-child {
@@ -190,6 +188,11 @@ body {
 footer#footer {
   background-color:$light_grey;
   padding:5em 10px;
+  > img {
+    display:block;
+    margin:0 auto 1.5em;
+    width:65px;
+  }
   > p {
     color:$mid_grey;
     margin:0 auto 1.5em;
@@ -240,9 +243,13 @@ section {
         margin-bottom:0.3em;
         padding-bottom:0;
       }
+      > img {
+        display:block;
+        margin:0 auto 1.5em;
+        width:100px;
+      }
       > p {
         color:$white;
-        font-style:italic;
         margin-bottom:0.3em;
       }
       > span {
@@ -260,7 +267,7 @@ section {
 
 #about {
   > img {
-    max-width:500px;
+    max-width:560px;
     width:100%;
   }
 }
@@ -290,7 +297,7 @@ section {
         > li {
           font-size:0.833em;
           margin-right:2em;
-          &:nth-child(2) {
+          &.about {
             margin-right:5em !important;
           }
         }
@@ -333,7 +340,7 @@ section {
         > li {
           font-size:0.722em;
           margin-right:1.2em;
-          &:nth-child(2) {
+          &.about {
             margin-right:4em !important;
           }
         }
@@ -364,6 +371,9 @@ section {
 
 // IE specific styles -----------------------------------------------
 
+.ie body {
+  font-size:112.5%;
+}
 .ie {
   #about {
     > img {
