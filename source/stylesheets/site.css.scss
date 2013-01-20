@@ -291,10 +291,10 @@ section {
       }
     }
     > nav {
-      background:$white image-url("nav_logo@2x.png") no-repeat 50% 25px;
+      background:$white image-url("nav_logo@2x.png") no-repeat 50% 20px;
       background-size:21px 26px;
       &.active {
-        background:$green image-url("nav_logo_active@2x.png") no-repeat 50% 25px;
+        background:$green image-url("nav_logo_active@2x.png") no-repeat 50% 20px !important;
       }
     }
   }
