@@ -394,6 +394,11 @@ section {
   font-size:112.5%;
 }
 .ie {
+  #header {
+    > nav > ul {
+      margin-right:-60px;
+    }
+  }
   #about {
     > img {
       width:500px;
