@@ -5,7 +5,7 @@ $(function(){
   }, 2000);*/
 
   var scroll_pos = 0;
-  $(document).scroll(function() { 
+  $(window).scroll(function(){
     scroll_pos = $(this).scrollTop();
     var headerHeight = $('#header').height() - 100;
     if(scroll_pos > headerHeight) {
