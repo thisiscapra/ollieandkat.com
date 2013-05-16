@@ -22,25 +22,6 @@
     %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js' }
     %script{ :src => "/javascripts/application.js" }
     :javascript
-        var z7x3p3;(function(d, t) {
-        var s = d.createElement(t), options = {
-        'userName':'ollieandkat', 
-        'formHash':'z7x3p3', 
-        'autoResize':true,
-        'height':'190',
-        'async':true,
-        'header':'show'};
-        //'resizeDone': resizeTheColorbox};
-        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-        s.onload = s.onreadystatechange = function() {
-        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-        try { z7x3p3 = new WufooForm();z7x3p3.initialize(options);z7x3p3.display(); } catch (e) {}};
-        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-        })(document, 'script');
-        function resizeTheColorbox() {
-          alert('resizing');
-        }
-    :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-37741121-1']);
       _gaq.push(['_trackPageview']);
