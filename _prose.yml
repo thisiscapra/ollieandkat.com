@@ -1,7 +1,6 @@
 prose:
+  media: 'source/images'
   rooturl: 'source/blog'
-  siteurl: 'http://ollieandkat.dev/'
-  media: 'images'
   metadata:
     source/blog:
       - name: "title"
