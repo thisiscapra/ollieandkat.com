@@ -1,6 +1,6 @@
 prose:
-  media: 'source/images/blog'
   rooturl: 'source/blog_articles'
+  media: 'source/images/blog'
   metadata:
     source/blog_articles:
       - name: "title"
