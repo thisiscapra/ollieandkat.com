@@ -47,6 +47,7 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
+  blog.taglink = "categories/{tag}.html"
 end
 
 # Reload the browser automatically whenever files change
@@ -59,9 +60,9 @@ helpers do
   # Set the page title
   def page_title
     if content_for?(:title)
-      "#{yield_content(:title)} - Capra Design"
+      "#{yield_content(:title)} - O&K"
     else
-      "Capra Design"
+      "Ollie & Kat"
     end
   end
   # Set the page description
@@ -69,7 +70,7 @@ helpers do
     if content_for?(:description)
       "#{yield_content(:description)}"
     else
-      "Hello, I'm Kat. I design websites, games & apps. Like goats, I like playful work, am curious about the world, and enjoy working within the herd to make great things."
+      ""
     end
   end
   # Custom page classes

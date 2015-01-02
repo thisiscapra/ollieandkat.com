@@ -1,0 +1,25 @@
+prose:
+  rooturl: 'source'
+  media: 'source/images/blog'
+  metadata:
+    source/blog:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          value: ""
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Categories"
+          alterable: true
+          options:
+            - name: 'Travelling'
+              value: 'travelling'
+            - name: 'Garden'
+              value: 'garden'

@@ -6,6 +6,9 @@
       <div itemprop="articleBody">
         <%= yield %>
       </div>
+      <% current_page.tags.each do |tag| %>
+      <%= link_to("#{tag}", "/tags/#{tag}/") %>
+      <% end %>
     </article>
   </section>
 <% end %>
