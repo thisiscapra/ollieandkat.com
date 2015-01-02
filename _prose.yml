@@ -13,6 +13,11 @@ prose:
           element: "text"
           label: "Date"
           value: ""
+      - name: featured_image
+        field:
+          element: "text"
+          label: "Featured image"
+          value: ""
       - name: "author"
         field:
           element: "text"

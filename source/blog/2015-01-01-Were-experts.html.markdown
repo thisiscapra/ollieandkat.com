@@ -1,6 +1,6 @@
 ---
-title: "We're experts"
-date: "2015-01-01"
+title: We're experts
+date: '2015-01-01'
 published: true
 author: Kat Neville
 ---

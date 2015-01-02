@@ -1,3 +1,18 @@
+Time.zone = "US/Eastern"
+
+# Blog activation
+
+activate :blog do |blog|
+  blog.layout = "blog"
+  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "blog/{title}.html"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+  blog.taglink = "tags/{tag}.html"
+end
+
 ###
 # Compass
 ###
@@ -39,17 +54,6 @@ page "/sitemap.xml", :layout => false
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
-
-activate :blog do |blog|
-  blog.layout = "blog"
-  blog.sources = "blog/:title.html"
-  blog.permalink = "{year}/{month}/{day}/{title}.html"
-  blog.paginate = true
-  blog.per_page = 10
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
-  blog.taglink = "tags/{tag}.html"
-end
 
 # Reload the browser automatically whenever files change
 configure :development do
