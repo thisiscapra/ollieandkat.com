@@ -4,6 +4,10 @@ prose:
   media: 'source/images/blog'
   metadata:
     source/blog:
+      - name: date
+        field:
+          element: hidden
+          value: ""
       - name: "title"
         field:
           element: "text"
