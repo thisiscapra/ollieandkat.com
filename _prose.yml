@@ -1,9 +1,9 @@
 baseurl: /source
 prose:
-  rooturl: 'source/blog'
+  rooturl: 'blog'
   media: 'images/blog'
   metadata:
-    source/blog:
+    blog:
       - name: "title"
         field:
           element: "text"
