@@ -1,14 +1,13 @@
 prose:
+  media: 'source/images/blog'
   rooturl: 'source/blog_articles'
-  siteurl: 'source'
-  media: 'images/blog'
   metadata:
     source/blog_articles:
-      # - name: "title"
-      #   field:
-      #     element: "text"
-      #     label: "Title"
-      #     value: ""
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
       - name: "author"
         field:
           element: "text"
