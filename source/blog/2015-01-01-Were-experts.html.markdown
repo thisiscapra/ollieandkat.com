@@ -1,8 +1,6 @@
 ---
 title: "We're experts"
 date: "2015-01-01"
-tags: 
-  - Garden
 published: true
 author: Kat Neville
 ---
