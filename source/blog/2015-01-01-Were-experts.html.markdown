@@ -1,14 +1,15 @@
 ---
 title: "We're experts"
-date: "2011-01-18"
-tags: []
+date: "2015-01-01"
+tags: 
+  - Garden
 published: true
+author: Kat Neville
 ---
 
 With our combined skills, we can take your projects to the next level.
 
 ###Web Design & Development
-
 
 The best webdesign lets customers do what they want easily.
 
