@@ -1,5 +1,6 @@
 <% content_for(:title, current_page.title) %>
 <% content_for(:description, Nokogiri::HTML(current_page.summary(115)).text) %>
+<% content_for(:background_image, current_page.featured_image) %>
 
 <% wrap_layout :layout do %>
   <section class="blog">
