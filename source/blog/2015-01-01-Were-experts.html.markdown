@@ -9,7 +9,7 @@ With our combined skills, we can take your projects to the next level.
 
 ###Web Design & Development
 
-![Dooms_Day.png](/source/blog/images/Dooms_Day.png)
+![winter-scene.png](/winter-scene.png)
 
 The best webdesign lets customers do what they want easily.
 
