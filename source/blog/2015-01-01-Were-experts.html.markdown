@@ -1,15 +1,19 @@
 ---
-title: We're experts
-date: '2015-01-01'
+title: "We're experts"
+date: "2015-01-01"
 published: true
 author: Kat Neville
+tags: 
+  - travelling
+  - garden
+featured_image: "https://farm3.staticflickr.com/2646/4205382940_287810e51d_b.jpg"
 ---
 
 With our combined skills, we can take your projects to the next level.
 
 ###Web Design & Development
 
-![ineedsleep.png](/images/blog/ineedsleep.png)
+![](/https://farm3.staticflickr.com/2646/4205382940_287810e51d_b.jpg)
 
 The best webdesign lets customers do what they want easily.
 
