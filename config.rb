@@ -82,6 +82,12 @@ helpers do
   def custom_page_classes
     "page-#{page_classes} #{yield_content(:page_class) if content_for?(:page_class)}"
   end
+  # Custom background images on header
+  def background_image
+    if content_for?(:background_image)
+      "style='background-image:url('#{yield_content(:background_image)}');'"
+    end
+  end
 end
 
 # Fix bug with build errors and typography fonts
