@@ -1,12 +1,12 @@
 baseurl: source
 prose:
   rooturl: 'source/blog'
-  media: 'source/images/blog'
+  media: 'images'
   metadata:
     source/blog:
       - name: date
         field:
-          element: hidden
+          element: "text"
           value: ""
       - name: "title"
         field:
