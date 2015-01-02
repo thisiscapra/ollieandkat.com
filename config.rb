@@ -48,7 +48,7 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
-  blog.taglink = "categories/{tag}.html"
+  blog.taglink = "tags/{tag}.html"
 end
 
 # Reload the browser automatically whenever files change
