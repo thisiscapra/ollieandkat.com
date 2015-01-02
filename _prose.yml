@@ -2,7 +2,7 @@ prose:
   rooturl: 'source/blog_articles'
   media: 'source/images/blog'
   metadata:
-    source/blog:
+    source/blog_articles:
       - name: "title"
         field:
           element: "text"
