@@ -42,7 +42,7 @@ page "/sitemap.xml", :layout => false
 
 activate :blog do |blog|
   blog.layout = "blog"
-  blog.sources = "blog/:title.html"
+  blog.sources = "blog_articles/:title.html"
   blog.permalink = "{year}/{month}/{day}/{title}.html"
   blog.paginate = true
   blog.per_page = 10
