@@ -1,3 +1,6 @@
+<% content_for(:title, current_page.title) %>
+<% content_for(:description, Nokogiri::HTML(current_page.summary(115)).text) %>
+
 <% wrap_layout :layout do %>
   <section class="blog">
     <article itemscope itemtype="http://schema.org/Article" class="blog-entry">
