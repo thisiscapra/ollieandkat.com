@@ -1,4 +1,4 @@
-baseurl: /source
+baseurl: source
 prose:
   rooturl: 'source/blog'
   media: 'images/blog'
