@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= page_title %></title>
+  <meta name="description" content="<%= page_description %>"/>
+  <meta name="keywords" content="design, web design, HTML5, CSS3, typography, layout, grids, goats, javascript, ruby, ruby on rails, wordpress, php, middleman app"/>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="/images/favicon.ico" rel="shortcut icon"></link>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/791304/css/fonts.css" />
+  <% if current_page.path == "wedding.html" %>
+    <%= stylesheet_link_tag "wedding.css" %>
+  <% else %>
+    <%= stylesheet_link_tag "site.css" %>
+  <% end %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag("html5shiv.min.js") %>
+  <![endif]-->
+</head>
+<body id="ollieandkat" class="<%= custom_page_classes %>">
+  <% if current_page.path == "wedding.html" %>
+    <%= yield %>
+  <% else %>
+    <main id="main" role="main">
+      <%= yield %>
+    </main>
+  <% end %>
+  <%= partial "footer" unless current_page.path == "wedding.html" %>
+  <%= javascript_include_tag "application" %>
+  <script>
+      var _gaq = [['_setAccount', 'UA-37741121-1'], ['_trackPageview']];
+      (function(d, t) {
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.async = true;
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+// Import our partials ----------------------------------------------------------
+
+@import "partials/common";
+@import "partials/reset";
+
+// Now set up the site ----------------------------------------------------------
+
+html {
+  height:100%;
+  width:100%;
+}
+body {
+  color:$black;
+  font: 400 112.5%/1.6 $sentinel;
+  height:100%;
+  text-align:center;
+  width:100%;
+}
+
+// Typography
+
+h1,h2,h3,h4 {
+  font-family:$archer;
+  font-weight:800;
+  font-size:1.778em;
+  margin-bottom:1em;
+  padding-bottom:1em;
+  position:relative;
+  text-transform:uppercase;
+}
+h1,h2 {
+  &:after {
+    background-color:$black;
+    bottom:0;
+    content: " ";
+    left:50%;
+    height:1px;
+    margin-left:-65px;
+    position:absolute;
+    width:130px;
+  }
+}
+p {
+  margin-bottom:1.5em;
+  > span {
+    color:$white;
+  }
+}
+
+// Links
+
+a:hover, a:active {
+  text-decoration:none;
+  outline: none; 
+}
+a, a:active { 
+  color:$green;
+  cursor:pointer;
+  text-decoration:none;
+  @include transition(0.3s ease all);
+}
+a:hover { 
+  color:shade($green,30%);
+  text-decoration:none; 
+}
+a:link  { 
+  -webkit-tap-highlight-color:$green;
+}
+
+// Site wide items 
+
+.column {
+  margin:0 auto;
+  max-width:400px;
+  width:100%;
+}
+img {
+  display:block;
+  margin:0 auto 3em;
+}
+
+// Base layout styles --------------------------------------------------------------------------
+
+html {
+  background-color:$white;
+  height:100%;
+  width:100%;
+}
+body {
+  height:100%;
+  width:100%;
+}
+
+// Header --------------------------------------------------------------------------------------
+
+#header {
+  background:image-url("header_background.jpg") no-repeat top center;
+  background-size:cover;
+  color:$white;
+  height:100%;
+  overflow:hidden;
+  width:100%;
+  > p {
+    font-size:1.333em;
+  }
+  h1 {
+    > span {
+      background:image-url("logo.png") no-repeat top center;
+      display:block;
+      height:204px;
+      left:-4px;
+      margin:15% auto 1em;
+      position:relative;
+      text-indent:-99999px;
+      width:276px;
+    }
+    &:after {
+      background-color:$white;
+    }
+  }
+  > nav {
+    background:$white image-url("nav_logo.png") no-repeat 50% 20px;
+    font-family:$archer;
+    font-weight:800;
+    left:0;
+    letter-spacing:2px;
+    padding:1.2em 0;
+    position:fixed;
+    text-transform:uppercase;
+    top:0;
+    width:100%;
+    z-index:100;
+    > ul {
+      margin-left:-20px;
+      > li {
+        display:inline;
+        margin-right:3.5em;
+        &.about {
+          margin-right:10em;
+        }
+        &:last-child {
+          margin-right:0;
+        }
+        > a:hover,&.active > a {
+          color:$black;
+        }
+      }
+    }
+    &.active {
+      background:$green image-url("nav_logo_active.png") no-repeat 50% 20px;
+      a {
+        color:$white;
+      }
+    }
+  }
+}
+
+// Footer -------------------------------------------------------------
+
+footer#footer {
+  background-color:$light_grey;
+  padding:5em 10px;
+  > img {
+    display:block;
+    margin:0 auto 1.5em;
+    width:65px;
+  }
+  > p {
+    color:$mid_grey;
+    margin:0 auto 1.5em;
+    max-width:400px;
+    width:100%;
+  }
+}
+
+// Main content -------------------------------------------------------
+
+section {
+  padding:5em 0;
+}
+
+// Info section -------------------------------------------------------
+
+#info {
+  background-color:$black;
+  color:$white;
+  > h2 {
+    &:after {
+      background-color:$white;
+    }
+  }
+  p {
+    color:$mid_grey;
+  }
+  > address {
+    font-family:$archer;
+    font-style:normal;
+    font-weight:800;
+    margin-bottom:3em;
+    text-transform:uppercase;
+  }
+  > ul {
+    letter-spacing:-4px;
+    margin:4em auto 3em;
+    max-width:750px;
+    width:100%;
+    word-spacing:-4px;
+    > li {
+      display:inline-block;
+      letter-spacing:normal;
+      word-spacing:normal;
+      width:33%;
+      > h3 {
+        font-size:1.333em;
+        margin-bottom:0.3em;
+        padding-bottom:0;
+      }
+      > img {
+        display:block;
+        margin:0 auto 1.5em;
+        width:100px;
+      }
+      > p {
+        color:$white;
+        margin-bottom:0.3em;
+      }
+      > span {
+        color:$mid_grey;
+        font-family:$archer;
+        font-size:0.833em;
+        font-weight:400;
+        text-transform:uppercase;
+      }
+    }
+  }
+}
+
+// ABout section ---------------------------------------------
+
+#about {
+  > img {
+    max-width:560px;
+    width:100%;
+  }
+}
+
+// RSVP section ----------------------------------------------
+
+#rsvp {
+  p {
+    margin-bottom:0;
+  }
+}
+
+// Media Queries ---------------------------------------------
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #header {
+    h1 {
+      > span {
+        background:image-url("logo@2x.png") no-repeat top center;
+        background-size:276px 204px;
+      }
+    }
+    > nav {
+      background:$white image-url("nav_logo@2x.png") no-repeat 50% 20px;
+      background-size:21px 26px;
+      &.active {
+        background:$green image-url("nav_logo_active@2x.png") no-repeat 50% 20px;
+        background-size:21px 26px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:582px) {
+  section {
+    padding:5em 1em;
+  }
+  .column {
+    max-width:100%;
+    width:100%;
+  }
+  #header {
+    > nav {
+      > ul {
+        margin-left:-10px;
+        > li {
+          font-size:0.833em;
+          margin-right:2em;
+          &.about {
+            margin-right:5em !important;
+          }
+        }
+      }
+    }
+    h1 {
+      > span {
+        margin:35% auto 1em;
+      }
+    }
+  }
+  #info {
+    > ul {
+      > li {
+        display:block;
+        margin-bottom:3em;
+        width:100%;
+        > img {
+          margin-bottom:1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  section {
+    padding:5em 1em;
+  }
+  .column {
+    max-width:100%;
+    width:100%;
+  }
+  #header {
+    height:550px;
+    > nav {
+      background-size:16px 20px;
+      > ul {
+        margin-left:-10px;
+        > li {
+          font-size:0.722em;
+          margin-right:1.2em;
+          &.about {
+            margin-right:4em !important;
+          }
+        }
+      }
+    }
+    h1 {
+      > span {
+        background-size:cover;
+        height:133px;
+        margin:35% auto 1em;
+        width:180px;
+      }
+    }
+  }
+  #info {
+    > ul {
+      > li {
+        display:block;
+        margin-bottom:3em;
+        width:100%;
+        > img {
+          margin-bottom:1em;
+        }
+      }
+    }
+  }
+}
+
+// IE specific styles -----------------------------------------------
+
+.ie body {
+  font-size:112.5%;
+}
+.ie {
+  #header {
+    > nav > ul {
+      margin-right:-60px;
+    }
+  }
+  #about {
+    > img {
+      width:500px;
+    }
+  }
+  #info {
+    > ul {
+      width:650px;
+    }
+  }
+}
