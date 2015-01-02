@@ -1,5 +1,5 @@
 prose:
-  media: 'source/images/blog'
+  media: 'images/blog'
   rooturl: 'source/blog'
   metadata:
     source/blog:
