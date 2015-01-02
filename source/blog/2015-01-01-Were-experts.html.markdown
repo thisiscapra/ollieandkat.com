@@ -9,7 +9,7 @@ With our combined skills, we can take your projects to the next level.
 
 ###Web Design & Development
 
-![ineedsleep.png](/source/images/blog/ineedsleep.png)
+![ineedsleep.png](/images/blog/ineedsleep.png)
 
 The best webdesign lets customers do what they want easily.
 
