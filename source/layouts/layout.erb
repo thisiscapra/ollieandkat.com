@@ -22,11 +22,12 @@
   <% if current_page.path == "wedding.html" %>
     <%= yield %>
   <% else %>
+    <%= partial "header" %>
     <main id="main" role="main">
       <%= yield %>
     </main>
+    <%= partial "footer" %>
   <% end %>
-  <%= partial "footer" unless current_page.path == "wedding.html" %>
   <%= javascript_include_tag "application" %>
   <script>
       var _gaq = [['_setAccount', 'UA-37741121-1'], ['_trackPageview']];

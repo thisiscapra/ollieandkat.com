@@ -6,59 +6,8 @@
 // Now set up the site ----------------------------------------------------------
 
 html {
-<<<<<<< HEAD
   height: 100%;
   width: 100%;
-=======
-  height:100%;
-  width:100%;
-}
-body {
-  color:$black;
-  font:112.5%/1.6 $kulturista;
-  font-weight:400;
-  height:100%;
-  text-align:center;
-  width:100%;
-}
-
-// Typography
-
-h1,h2,h3,h4 {
-  font-family:$brandon;
-  font-weight:900;
-  font-size:1.778em;
-  letter-spacing:6px;
-  margin-bottom:1em;
-  padding-bottom:1em;
-  position:relative;
-  text-transform:uppercase;
-}
-h1,h2 {
-  &:after {
-    background-color:$black;
-    bottom:0;
-    content: " ";
-    left:50%;
-    height:1px;
-    margin-left:-65px;
-    position:absolute;
-    width:130px;
-  }
-}
-p {
-  margin-bottom:1.5em;
-  > span {
-    color:$white;
-  }
-}
-
-// Links
-
-a:hover, a:active {
-  text-decoration:none;
-  outline: none; 
->>>>>>> 13e3d5c0c24c2a0cb9b576654d4d96ca5c41b280
 }
 body {
   color: $black;
@@ -66,7 +15,7 @@ body {
   padding: 3em;
   text-align: left;
 }
-main {
+main, header, footer {
   margin: 0 auto;
   max-width: 600px;
   width: 100%;
@@ -77,7 +26,6 @@ img {
   max-width: 100%;
 }
 
-<<<<<<< HEAD
 // Typography
 
 h1,h2,h3,h4 {
@@ -98,67 +46,21 @@ h3 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 0.75em;
-=======
-// Site wide items 
-
-.column {
-  margin:0 auto;
-  max-width:400px;
-  width:100%;
-}
-img {
-  display:block;
-  margin:0 auto 3em;
-}
-
-// Typekit loading elements --------------------------------------------------------------------
-
-.wf-loading h1, 
-.wf-loading h2, 
-.wf-loading h3, 
-.wf-loading p,
-.wf-loading nav li {
-  opacity: 0;
-}
-.ie.wf-loading h1, 
-.ie.wf-loading h2, 
-.ie.wf-loading h3, 
-.ie.wf-loading p,
-.ie.wf-loading nav li  {
-  visibility:hidden;
-}
-.wf-active h1, 
-.wf-active h2, 
-.wf-active h3, 
-.wf-active p, 
-.wf-active nav li {
-  opacity: 1;
-  visibility: visible;
-  @include transition(opacity 0.24s ease-in-out);
-}
-
-// Base layout styles --------------------------------------------------------------------------
-
-html {
-  background-color:$white;
-  height:100%;
-  width:100%;
->>>>>>> 13e3d5c0c24c2a0cb9b576654d4d96ca5c41b280
 }
 h4 {
   font-size: 1.25em;
   line-height: 1;
   margin-bottom: 0.75em;
 }
-<<<<<<< HEAD
 p {
   margin: 0 auto 1.5em;
 }
 time {
   color: #999;
+  display: block;
   font-size: 0.9em;
   margin-bottom: 1em;
-  display: block;
+  text-align: center;
 }
 
 // Links
@@ -174,8 +76,15 @@ a {
 
 // Header and Footer
 
-#footer {
+header {
+  margin-bottom: 3em;
+}
+
+footer {
+  border-top: 1px solid #e1e1e1;
   color: #999;
+  margin-top: 3em;
+  padding-top: 3em;
   font-size: 0.9em;
   text-align: center;
 }
@@ -183,299 +92,16 @@ a {
 // Articles 
 
 article {
-  h2 {
+  h1, h2 {
+    text-align: center;
     margin: 0 0 0.2em;
-=======
-
-// Header --------------------------------------------------------------------------------------
-
-#header {
-  background:image-url("header_background.jpg") no-repeat top center;
-  background-size:cover;
-  color:$white;
-  height:100%;
-  overflow:hidden;
-  width:100%;
-  > p {
-    font-size:1.333em;
   }
-  h1 {
-    > span {
-      background:image-url("logo.png") no-repeat top center;
-      display:block;
-      height:204px;
-      left:-4px;
-      margin:15% auto 1em;
-      position:relative;
-      text-indent:-99999px;
-      width:276px;
-    }
-    &:after {
-      background-color:$white;
-    }
-  }
-  > nav {
-    background:$white image-url("nav_logo.png") no-repeat 50% 20px;
-    font-family:$brandon;
-    font-weight:700;
-    left:0;
-    letter-spacing:2px;
-    padding:1.2em 0;
-    position:fixed;
-    text-transform:uppercase;
-    top:0;
-    width:100%;
-    z-index:100;
-    > ul {
-      margin-left:-20px;
-      > li {
-        display:inline;
-        margin-right:3.5em;
-        &.about {
-          margin-right:10em;
-        }
-        &:last-child {
-          margin-right:0;
-        }
-        > a:hover,&.active > a {
-          color:$black;
-        }
-      }
-    }
-    &.active {
-      background:$green image-url("nav_logo_active.png") no-repeat 50% 20px;
-      a {
-        color:$white;
-      }
-    }
-  }
-}
-
-// Footer -------------------------------------------------------------
-
-footer#footer {
-  background-color:$light_grey;
-  padding:5em 10px;
-  > img {
-    display:block;
-    margin:0 auto 1.5em;
-    width:65px;
-  }
-  > p {
-    color:$mid_grey;
-    margin:0 auto 1.5em;
-    max-width:400px;
-    width:100%;
-  }
-}
-
-// Main content -------------------------------------------------------
-
-section {
-  padding:5em 0;
-}
-
-// Info section -------------------------------------------------------
-
-#info {
-  background-color:$black;
-  color:$white;
-  > h2 {
-    &:after {
-      background-color:$white;
-    }
-  }
-  p {
-    color:$mid_grey;
-  }
-  > address {
-    font-family:$brandon;
-    font-style:normal;
-    font-weight:900;
-    margin-bottom:3em;
-    text-transform:uppercase;
-  }
-  > ul {
-    letter-spacing:-4px;
-    margin:4em auto 3em;
-    max-width:750px;
-    width:100%;
-    word-spacing:-4px;
-    > li {
-      display:inline-block;
-      letter-spacing:normal;
-      word-spacing:normal;
-      width:33%;
-      > h3 {
-        font-size:1.333em;
-        margin-bottom:0.3em;
-        padding-bottom:0;
-      }
-      > img {
-        display:block;
-        margin:0 auto 1.5em;
-        width:100px;
-      }
-      > p {
-        color:$white;
-        margin-bottom:0.3em;
-      }
-      > span {
-        color:$mid_grey;
-        font-family:$brandon;
-        font-size:0.833em;
-        font-weight:400;
-        text-transform:uppercase;
-      }
-    }
-  }
-}
-
-// ABout section ---------------------------------------------
-
-#about {
-  > img {
-    max-width:560px;
-    width:100%;
-  }
-}
-
-// RSVP section ----------------------------------------------
-
-#rsvp {
-  p {
-    margin-bottom:0;
-  }
-}
-
-// Media Queries ---------------------------------------------
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  #header {
-    h1 {
-      > span {
-        background:image-url("logo@2x.png") no-repeat top center;
-        background-size:276px 204px;
-      }
-    }
-    > nav {
-      background:$white image-url("nav_logo@2x.png") no-repeat 50% 20px;
-      background-size:21px 26px;
-      &.active {
-        background:$green image-url("nav_logo_active@2x.png") no-repeat 50% 20px;
-        background-size:21px 26px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width:582px) {
-  section {
-    padding:5em 1em;
-  }
-  .column {
-    max-width:100%;
-    width:100%;
-  }
-  #header {
-    > nav {
-      > ul {
-        margin-left:-10px;
-        > li {
-          font-size:0.833em;
-          margin-right:2em;
-          &.about {
-            margin-right:5em !important;
-          }
-        }
-      }
-    }
-    h1 {
-      > span {
-        margin:35% auto 1em;
-      }
-    }
-  }
-  #info {
-    > ul {
-      > li {
-        display:block;
-        margin-bottom:3em;
-        width:100%;
-        > img {
-          margin-bottom:1em;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-device-width: 480px) {
-  section {
-    padding:5em 1em;
-  }
-  .column {
-    max-width:100%;
-    width:100%;
-  }
-  #header {
-    height:550px;
-    > nav {
-      background-size:16px 20px;
-      > ul {
-        margin-left:-10px;
-        > li {
-          font-size:0.722em;
-          margin-right:1.2em;
-          &.about {
-            margin-right:4em !important;
-          }
-        }
-      }
-    }
-    h1 {
-      > span {
-        background-size:cover;
-        height:133px;
-        margin:35% auto 1em;
-        width:180px;
-      }
-    }
-  }
-  #info {
-    > ul {
-      > li {
-        display:block;
-        margin-bottom:3em;
-        width:100%;
-        > img {
-          margin-bottom:1em;
-        }
-      }
-    }
-  }
-}
-
-// IE specific styles -----------------------------------------------
-
-.ie body {
-  font-size:112.5%;
-}
-.ie {
-  #header {
-    > nav > ul {
-      margin-right:-60px;
-    }
-  }
-  #about {
-    > img {
-      width:500px;
-    }
-  }
-  #info {
-    > ul {
-      width:650px;
-    }
->>>>>>> 13e3d5c0c24c2a0cb9b576654d4d96ca5c41b280
+  p:first-of-type:first-letter {
+    font-family:$archer;
+    float: left;
+    line-height: 0.55;
+    font-size: 3em;
+    font-weight: 800;
+    margin: 15px 0.2em 0 0;
   }
 }
