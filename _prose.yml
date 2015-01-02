@@ -1,18 +1,18 @@
-baseurl: source
 prose:
   rooturl: 'source/blog'
+  siteurl: 'http://ollieandkat.dev/'
   media: 'images'
   metadata:
     source/blog:
-      - name: date
-        field:
-          element: "text"
-          label: "Date"
-          value: ""
       - name: "title"
         field:
           element: "text"
           label: "Title"
+          value: ""
+      - name: date
+        field:
+          element: "text"
+          label: "Date"
           value: ""
       - name: "author"
         field:
