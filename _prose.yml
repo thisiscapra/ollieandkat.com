@@ -1,7 +1,7 @@
 baseurl: source
 prose:
   rooturl: 'source/blog'
-  media: 'images/blog'
+  media: 'source/images/blog'
   metadata:
     source/blog:
       - name: "title"
@@ -17,7 +17,7 @@ prose:
       - name: "tags"
         field:
           element: "multiselect"
-          label: "Categories"
+          label: "Tags"
           alterable: true
           options:
             - name: 'Travelling'
