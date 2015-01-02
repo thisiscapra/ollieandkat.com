@@ -1,5 +1,12 @@
-- content_for :head do
-  %title Save the date! Ollie and Kat are getting married.
+- content_for :title do
+  Save the date! Ollie and Kat are getting married.
+
+- content_for :description do
+  Save the date, we are getting married in 2014!
+  %link{ href: '/images/favicon.ico', rel: 'shortcut icon' }/
+
+- content_for :stylesheet do
+  = stylesheet_link_tag "/stylesheets/wedding.css"
 
 %header#header
   %nav
@@ -66,7 +73,7 @@
 %footer#footer
   =image_tag("footer_icon.png", :alt => "")
   %p 
-    Copyright © 2013 Ollie &amp; Kat.<br/>
+    Copyright © <%= Time.now.year %> Ollie &amp; Kat.<br/>
     For any further information contact us at
     = succeed '.' do
       =link_to("info@ollieandkat.com", "mailto:info@ollieandkat.com")

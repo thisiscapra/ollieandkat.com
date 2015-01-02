@@ -1,10 +1,6 @@
-### 
+###
 # Compass
 ###
-
-# Susy grids in Compass
-# First: gem install compass-susy-plugin
-# require 'susy'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -12,90 +8,107 @@
 # end
 
 ###
-# Haml
-###
-
-# CodeRay syntax highlighting in Haml
-# First: gem install haml-coderay
-require 'haml-coderay'
-
-# CoffeeScript filters in Haml
-# First: gem install coffee-filter
-require 'coffee-filter'
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-set :markdown, :layout_engine => :haml
-
-activate :directory_indexes
-
-###
-# Page command
+# Page options, layouts, aliases and proxies
 ###
 
 # Per-page layout changes:
-# 
+#
 # With no layout
-# page "/path/to/file.html", :layout => false
-# 
+# page "/path/to/file.html", layout: false
+
+page "/feed.xml", layout: false
+page "/404.html", :layout => false
+page "/sitemap.xml", :layout => false
+
+#
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-# 
+# page "/path/to/file.html", layout: :otherlayout
+#
 # A path which all have the same layout
 # with_layout :admin do
 #   page "/admin/*"
 # end
 
-# Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
-# end
+# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
+# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
+#  which_fake_page: "Rendering a fake page with a local variable" }
 
 ###
 # Helpers
 ###
 
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
+
+activate :blog do |blog|
+  blog.layout = "blog"
+  blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+end
+
+# Reload the browser automatically whenever files change
+configure :development do
+  activate :livereload, :host => "thisiscapra.dev", :apply_js_live => true, :apply_css_live => true
+end
+
 # Methods defined in the helpers block are available in templates
 helpers do
-  def conditional_html(options={}, &blk)
-    attrs = options.map { |(k, v)| " #{h k}=\"#{h v}\"" }.join('')
-    [ "<!--[if lt IE 9]>                 <html#{attrs} class=\"ie\"> <![endif]-->",
-      "<!--[if (gte IE 9)|!(IE)]><!-->   <html#{attrs}> <!--<![endif]-->",
-      capture_haml(&blk).strip,
-      "</html>"
-    ].join("\n")
+  # Set the page title
+  def page_title
+    if content_for?(:title)
+      "#{yield_content(:title)} - Capra Design"
+    else
+      "Capra Design"
+    end
+  end
+  # Set the page description
+  def page_description
+    if content_for?(:description)
+      "#{yield_content(:description)}"
+    else
+      "Hello, I'm Kat. I design websites, games & apps. Like goats, I like playful work, am curious about the world, and enjoy working within the herd to make great things."
+    end
+  end
+  # Custom page classes
+  def custom_page_classes
+    "page-#{page_classes} #{yield_content(:page_class) if content_for?(:page_class)}"
   end
 end
 
-# Change the CSS directory
-# set :css_dir, "alternative_css_directory"
+# Fix bug with build errors and typography fonts
+ignore 'fonts/*'
 
-# Change the JS directory
-# set :js_dir, "alternative_js_directory"
+after_build do |builder|
+  print "After_build fixes... "
+  FileUtils.cp_r(Dir['source/fonts/'],'build/')
+  puts "done."
+end
 
-# Change the images directory
-# set :images_dir, "alternative_image_directory"
+activate :directory_indexes
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
-  
+
   # Minify Javascript on build
   activate :minify_javascript
-  
+
   # Enable cache buster
-  activate :cache_buster
-  
+  activate :asset_hash
+
   # Use relative URLs
   activate :relative_assets
-  
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
-  
+
   # Or use a different image path
-  # set :http_path, "/Content/images/"
+  # set :http_prefix, "/Content/images/"
 end

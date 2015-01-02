@@ -1,3 +1,5 @@
+//= require "jquery-1.11.2.min"
+
 $(function(){
 
   /*/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
