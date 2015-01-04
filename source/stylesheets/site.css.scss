@@ -13,6 +13,9 @@ body {
   color: $black;
   font: 400 125%/1.6 $sentinel;
   text-align: left;
+  @media screen and (max-width: 800px) {
+    font-size: 100%;
+  }
 }
 main {
   margin: 0 auto;
@@ -25,6 +28,7 @@ main {
   max-width: 700px;
   padding: 6em 2em 3em;
   width: 100%;
+  @include box-sizing(border-box);
   h1 {
     text-align: center;
   }
@@ -47,6 +51,18 @@ img {
 .col-right {
   width: 30%;
 }
+@media screen and (max-width: 700px) {
+  .col-left,
+  .col-right {
+    border-color: 0;
+    float: none;
+    width: 100%;
+  }
+  .col-right {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 3em;
+  }
+}
 
 // Typography
 
@@ -55,7 +71,7 @@ h1,h2,h3,h4 {
   font-weight: 800;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1;
   margin-bottom: 0.75em;
 }
@@ -109,7 +125,7 @@ a {
   background-color: $green;
   overflow: hidden;
   text-align: left;
-  padding: 1em;
+  padding: 1em 2em;
   position: fixed;
   top: 0;
   left: 0;
@@ -143,6 +159,11 @@ a {
         margin-left: 0;
       }
     }
+    @media screen and (max-width: 800px) {
+      ul {
+        margin-top: 0.3em;
+      }
+    }
   }
 }
 
@@ -152,6 +173,9 @@ footer {
   padding: 3em 2em;
   font-size: 0.9em;
   text-align: center;
+  li {
+    list-style: none;
+  }
 }
 
 // Articles 
@@ -162,6 +186,16 @@ article {
     padding: 17% 7em 12%;
     position: relative;
     text-align: center;
+    -webkit-filter: grayscale(1);
+    @media screen and (max-width: 800px) {
+      padding: 22% 3em 12%;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 28% 2em 12%;
+    }
+    @media screen and (max-width: 400px) {
+      padding: 32% 2em 12%;
+    }
     &:before {
       background-color: rgba(0,0,0,0.7);
       bottom: 0;
@@ -173,21 +207,20 @@ article {
       z-index: 1;
     }
     time {
-      //color: lighten($green, 0.4);
       position: relative;
       z-index: 1;
     }
     h1 {
-      //background-color: rgba(0,0,0,0.6);
       color: #fff;
       display: inline;
       line-height: 1.2;
+      font-size: 3.5em;
       padding: 0.2em;
       position: relative;
       text-align: center;
       z-index: 1;
-      a {
-        color: #fff;
+      @media screen and (max-width: 800px) {
+        font-size: 2.5em;
       }
     }
   }
@@ -200,13 +233,19 @@ article {
   h2 {
     margin: 0 0 0.2em;
   }
-  p:first-of-type:first-letter {
-    font-family:$archer;
-    float: left;
-    line-height: 0.55;
-    font-size: 3em;
-    font-weight: 800;
-    margin: 15px 0.2em 0 0;
+  p:first-of-type {
+    font-size: 1.2em;
+    &:first-letter {
+      font-family:$archer;
+      float: left;
+      line-height: 0.55;
+      font-size: 3em;
+      font-weight: 800;
+      margin: 12px 0.2em 0 0;
+      @media screen and (max-width: 800px) {
+         margin: 9px 0.2em 0 0;
+      }
+    }
   }
   &.summary {
     border-bottom: 1px solid #e1e1e1;
@@ -214,6 +253,7 @@ article {
     padding-bottom: 1em;
     &:last-child {
       border: 0;
+      margin: 0;
     }
   }
 }
