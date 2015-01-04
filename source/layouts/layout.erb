@@ -28,7 +28,7 @@
     </main>
     <%= partial "footer" %>
   <% end %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" if current_page.path == "wedding.html" %>
   <script>
       var _gaq = [['_setAccount', 'UA-37741121-1'], ['_trackPageview']];
       (function(d, t) {
