@@ -78,15 +78,33 @@ helpers do
       ""
     end
   end
+  # Active nav items
+  def nav_active(page)
+    current_page.url.start_with?(page) ? {:class => 'active'} : {}
+  end
   # Custom page classes
   def custom_page_classes
     "page-#{page_classes} #{yield_content(:page_class) if content_for?(:page_class)}"
   end
   # Custom background images on header
-  def background_image
-    if content_for?(:background_image)
-      "style='background-image:url('#{yield_content(:background_image)}');'"
+  def featured_image
+    if content_for?(:featured_image)
+      "style='background-image:url(#{yield_content(:featured_image)});'"
     end
+  end
+  # Tag lists
+  def sentence_tag_list(article)
+    if tags = article.tags
+      content_tag(:div, class: :tags) do
+        "This article was filed under " +
+        article.tags.map{|t| link_to t, "/tags/#{t}"}.to_sentence +
+        "."
+      end
+    end
+  end
+  # Pretty dates
+  def pretty_date(date)
+    date.strftime('%B %d, %Y')
   end
 end
 

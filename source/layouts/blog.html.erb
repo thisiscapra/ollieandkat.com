@@ -1,18 +1,8 @@
 <% content_for(:title, current_page.title) %>
 <% content_for(:description, Nokogiri::HTML(current_page.summary(115)).text) %>
-<% content_for(:background_image, current_page.featured_image) %>
 
 <% wrap_layout :layout do %>
   <section class="blog">
-    <article itemscope itemtype="http://schema.org/Article" class="blog-entry">
-      <h1 itemprop="name"><%= current_page.title %></h1>
-      <time itemprop="datePublished" datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
-      <div itemprop="articleBody">
-        <%= yield %>
-      </div>
-      <% current_page.tags.each do |tag| %>
-      <%= link_to("#{tag}", "/tags/#{tag}/") %>
-      <% end %>
-    </article>
+    <%= partial "blog_entry", :locals => { :article => current_page } %>
   </section>
 <% end %>

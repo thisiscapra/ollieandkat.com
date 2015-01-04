@@ -1,19 +1,19 @@
 ---
-title: "We're experts"
+title: "Testing really loong titles that wrap over two lines"
 date: "2015-01-01"
 published: true
 author: Kat Neville
 tags: 
   - travelling
   - garden
-featured_image: "https://farm3.staticflickr.com/2646/4205382940_287810e51d_b.jpg"
+featured-image: "https://farm3.staticflickr.com/2646/4205382940_287810e51d_b.jpg"
 ---
 
 With our combined skills, we can take your projects to the next level.
 
 ###Web Design & Development
 
-![](/https://farm3.staticflickr.com/2646/4205382940_287810e51d_b.jpg)
+![](https://farm3.staticflickr.com/2646/4205382940_287810e51d_b.jpg)
 
 The best webdesign lets customers do what they want easily.
 

@@ -1,0 +1,6 @@
+{
+  "name": "ollieandkat",
+  "root": "./build",
+  "clean_urls": true,
+  "error_page": "404.html"
+}
