@@ -1,0 +1,27 @@
+<% content_for(:featured_image, article.metadata[:page]['featured-image']) %>
+<article itemscope itemtype="http://schema.org/Article" class="blog-entry">
+  <header <%= featured_image %>>
+    <h1 itemprop="name"><%= article.title %></h1>
+    <time itemprop="datePublished" datetime="<%= pretty_date(article.date) %>"><%= pretty_date(article.date) %></time>
+  </header>
+  <div class="body">
+    <div itemprop="articleBody">
+      <%= article.body %>
+    </div>
+    <% if article.tags %>
+      <%= sentence_tag_list(article) %>
+    <% end %>
+    <% prev_article = article.previous_article
+       next_article = article.next_article
+       if prev_article || next_article %>
+        <ul class="article-nav">
+          <% if prev_article %>
+            <li class="prev">Prev: <%= link_to(prev_article.title, prev_article.url) %></li>
+          <% end %>
+          <% if next_article %>
+            <li class="next">Next: <%= link_to(next_article.title, next_article.url) %></li>
+          <% end %>
+        </ul>
+    <% end %>
+  </div>
+</article>

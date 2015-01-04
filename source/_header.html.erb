@@ -1,3 +1,9 @@
-<header id="header"<%= background_image %>>
-  <%= link_to(image_tag("badge.svg", alt: "Ollie & Kat", width: "200px", height: "200px"), "/") %>
+<header id="header">
+  <%= link_to(image_tag("logo.svg", alt: "Ollie & Kat", width: "100px"), "/") %>
+  <nav>
+    <ul>
+      <li><%= link_to("About", "/about/", nav_active("/about/")) %></li>
+      <li><%= link_to("Archive", "/archive/", nav_active("/archive/")) %></li>
+    </ul>
+  </nav>
 </header>

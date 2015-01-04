@@ -12,25 +12,47 @@ html {
 body {
   color: $black;
   font: 400 125%/1.6 $sentinel;
-  padding: 3em;
   text-align: left;
 }
-main, header, footer {
+main {
   margin: 0 auto;
-  max-width: 600px;
   width: 100%;
+  @include box-sizing(border-box);
+  @extend %clearfix;
+}
+.body {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 6em 2em 3em;
+  width: 100%;
+  h1 {
+    text-align: center;
+  }
 }
 img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
+.col-left,
+.col-right {
+  float: left;
+  padding: 5.5em 2em 3em;
+  @include box-sizing(border-box);
+}
+.col-left {
+  border-right: 1px solid #e1e1e1;
+  width: 70%;
+}
+.col-right {
+  width: 30%;
+}
 
 // Typography
 
 h1,h2,h3,h4 {
-  font-family:$archer;
-  font-weight:800;
+  font-family: $archer;
+  font-weight: 800;
 }
 h1 {
   font-size: 3em;
@@ -60,7 +82,14 @@ time {
   display: block;
   font-size: 0.9em;
   margin-bottom: 1em;
-  text-align: center;
+}
+ul, ol {
+  margin: 0 0 1.5em 1em;
+  padding: 0;
+}
+li {
+  margin: 0 0 0.1em 0;
+  padding: 0;
 }
 
 // Links
@@ -76,15 +105,51 @@ a {
 
 // Header and Footer
 
-header {
-  margin-bottom: 3em;
+#header {
+  background-color: $green;
+  overflow: hidden;
+  text-align: left;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  img {
+    float: left;
+    opacity: 1;
+    @include transition(opacity 0.1s linear);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  a {
+    color: #fff;
+    opacity: 1;
+    @include transition(opacity 0.1s linear);
+    &:hover, &.active {
+      opacity: 0.3;
+    }
+  }
+  nav {
+    float: right;
+    ul {
+      margin: 0;
+    }
+    li {
+      display: inline;
+      margin-left: 1em;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 footer {
   border-top: 1px solid #e1e1e1;
   color: #999;
-  margin-top: 3em;
-  padding-top: 3em;
+  padding: 3em 2em;
   font-size: 0.9em;
   text-align: center;
 }
@@ -92,8 +157,47 @@ footer {
 // Articles 
 
 article {
-  h1, h2 {
+  header {
+    background-size: cover;
+    padding: 17% 7em 12%;
+    position: relative;
     text-align: center;
+    &:before {
+      background-color: rgba(0,0,0,0.7);
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+    time {
+      //color: lighten($green, 0.4);
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      //background-color: rgba(0,0,0,0.6);
+      color: #fff;
+      display: inline;
+      line-height: 1.2;
+      padding: 0.2em;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .body {
+    padding-top: 3em;
+  }
+  .tags {
+    color: #999;
+  }
+  h2 {
     margin: 0 0 0.2em;
   }
   p:first-of-type:first-letter {
@@ -104,4 +208,36 @@ article {
     font-weight: 800;
     margin: 15px 0.2em 0 0;
   }
+  &.summary {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    &:last-child {
+      border: 0;
+    }
+  }
 }
+.article-nav {
+  border-top: 1px solid #e1e1e1;
+  font-size: 0.8em;
+  letter-spacing: -4px;
+  margin: 2em 0 0 0;
+  padding-top: 2em;
+  word-spacing: -4px;
+  li {
+    display: inline-block;
+    letter-spacing: 0;
+    word-spacing: 0;
+    width: 50%;
+    @include box-sizing(border-box);
+    &.first-child {
+      padding-right: 1em;
+    }
+    &.last-child {
+      padding-left: 1em;
+    }
+  }
+  @extend %clearfix;
+}
+
+// Archive 

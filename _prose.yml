@@ -13,7 +13,7 @@ prose:
           element: "text"
           label: "Date"
           value: ""
-      - name: featured_image
+      - name: featured-image
         field:
           element: "text"
           label: "Featured image"

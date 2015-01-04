@@ -70,7 +70,9 @@
 %footer#footer
   =image_tag("footer_icon.png", :alt => "")
   %p 
-    Copyright © <%= Time.now.year %> Ollie &amp; Kat.<br/>
+    Copyright © 
+    = Time.now.year 
+    Ollie &amp; Kat.<br/>
     For any further information contact us at
     = succeed '.' do
       =link_to("info@ollieandkat.com", "mailto:info@ollieandkat.com")

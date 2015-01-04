@@ -1,0 +1,308 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'divshot-cli' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose cache add [ 'divshot-cli', null ]
+5 verbose cache add name=undefined spec="divshot-cli" args=["divshot-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'divshot-cli',
+6 verbose parsed url   path: 'divshot-cli',
+6 verbose parsed url   href: 'divshot-cli' }
+7 silly lockFile a100e37d-divshot-cli divshot-cli
+8 verbose lock divshot-cli /Users/olliekav/.npm/a100e37d-divshot-cli.lock
+9 silly lockFile a100e37d-divshot-cli divshot-cli
+10 silly lockFile a100e37d-divshot-cli divshot-cli
+11 verbose addNamed [ 'divshot-cli', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile f57fbc2c-divshot-cli divshot-cli@
+14 verbose lock divshot-cli@ /Users/olliekav/.npm/f57fbc2c-divshot-cli.lock
+15 silly addNameRange { name: 'divshot-cli', range: '*', hasData: false }
+16 verbose request where is /divshot-cli
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 56db07f77254854b
+19 verbose url raw /divshot-cli
+20 verbose url resolving [ 'https://registry.npmjs.org/', './divshot-cli' ]
+21 verbose url resolved https://registry.npmjs.org/divshot-cli
+22 verbose request where is https://registry.npmjs.org/divshot-cli
+23 info trying registry request attempt 1 at 15:41:55
+24 http GET https://registry.npmjs.org/divshot-cli
+25 http 200 https://registry.npmjs.org/divshot-cli
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Sat, 03 Jan 2015 20:41:55 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"EAGUJ6K2EO5EQ81XT9P8MH1WH"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '252367',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-jfk1022-JFK',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1420317715.368635,VS0,VE21',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'divshot-cli', range: '*', hasData: true }
+28 silly addNameRange versions [ 'divshot-cli',
+28 silly addNameRange   [ '0.0.2',
+28 silly addNameRange     '0.0.3',
+28 silly addNameRange     '0.0.4',
+28 silly addNameRange     '0.0.5',
+28 silly addNameRange     '0.0.6',
+28 silly addNameRange     '0.0.7',
+28 silly addNameRange     '0.0.8',
+28 silly addNameRange     '0.0.9',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.2.3',
+28 silly addNameRange     '0.2.6',
+28 silly addNameRange     '0.2.9',
+28 silly addNameRange     '0.2.10',
+28 silly addNameRange     '0.2.11',
+28 silly addNameRange     '0.2.13',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.3.2',
+28 silly addNameRange     '0.3.3',
+28 silly addNameRange     '0.3.4',
+28 silly addNameRange     '0.3.5',
+28 silly addNameRange     '0.3.6',
+28 silly addNameRange     '0.3.7',
+28 silly addNameRange     '0.3.9',
+28 silly addNameRange     '0.3.10',
+28 silly addNameRange     '0.3.11',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.4.4',
+28 silly addNameRange     '0.4.5',
+28 silly addNameRange     '0.4.6',
+28 silly addNameRange     '0.4.7',
+28 silly addNameRange     '0.4.8',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.2',
+28 silly addNameRange     '0.6.3',
+28 silly addNameRange     '0.6.4',
+28 silly addNameRange     '0.6.6',
+28 silly addNameRange     '0.6.7',
+28 silly addNameRange     '0.6.8',
+28 silly addNameRange     '0.6.9',
+28 silly addNameRange     '0.6.10',
+28 silly addNameRange     '0.6.11',
+28 silly addNameRange     '0.6.12',
+28 silly addNameRange     '0.6.13',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.8.0',
+28 silly addNameRange     '0.8.1',
+28 silly addNameRange     '0.8.2',
+28 silly addNameRange     '0.8.3',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.9.1',
+28 silly addNameRange     '0.9.2',
+28 silly addNameRange     '0.9.3',
+28 silly addNameRange     '0.9.4',
+28 silly addNameRange     '0.9.5',
+28 silly addNameRange     '0.9.6',
+28 silly addNameRange     '0.9.8',
+28 silly addNameRange     '0.9.9',
+28 silly addNameRange     '0.9.10',
+28 silly addNameRange     '0.9.11',
+28 silly addNameRange     '0.9.13',
+28 silly addNameRange     '0.9.14',
+28 silly addNameRange     '0.10.0',
+28 silly addNameRange     '0.10.1',
+28 silly addNameRange     '0.11.0',
+28 silly addNameRange     '0.11.1',
+28 silly addNameRange     '0.11.2',
+28 silly addNameRange     '0.12.0',
+28 silly addNameRange     '0.12.1',
+28 silly addNameRange     '0.12.2',
+28 silly addNameRange     '0.12.3',
+28 silly addNameRange     '0.12.4',
+28 silly addNameRange     '0.14.0-rc1',
+28 silly addNameRange     '0.14.2-rc1',
+28 silly addNameRange     '0.14.2-rc2',
+28 silly addNameRange     '0.15.0',
+28 silly addNameRange     '0.15.1',
+28 silly addNameRange     '0.15.2',
+28 silly addNameRange     '0.15.3',
+28 silly addNameRange     '0.15.4',
+28 silly addNameRange     '0.15.5',
+28 silly addNameRange     '0.15.6',
+28 silly addNameRange     '0.15.7',
+28 silly addNameRange     '0.16.0',
+28 silly addNameRange     '0.16.1',
+28 silly addNameRange     '0.16.2',
+28 silly addNameRange     '0.16.3',
+28 silly addNameRange     '0.16.4',
+28 silly addNameRange     '0.16.5',
+28 silly addNameRange     '0.16.6',
+28 silly addNameRange     '0.16.7',
+28 silly addNameRange     '0.17.0',
+28 silly addNameRange     '0.18.0',
+28 silly addNameRange     '0.18.1',
+28 silly addNameRange     '0.18.2',
+28 silly addNameRange     '1.0.0-rc2',
+28 silly addNameRange     '1.0.0-rc3',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.0.1',
+28 silly addNameRange     '1.0.2',
+28 silly addNameRange     '1.0.3',
+28 silly addNameRange     '1.0.4',
+28 silly addNameRange     '1.0.5',
+28 silly addNameRange     '1.0.6',
+28 silly addNameRange     '1.0.7',
+28 silly addNameRange     '1.0.8',
+28 silly addNameRange     '1.0.9',
+28 silly addNameRange     '1.0.10',
+28 silly addNameRange     '1.1.0',
+28 silly addNameRange     '1.3.0',
+28 silly addNameRange     '1.3.1',
+28 silly addNameRange     '1.3.2',
+28 silly addNameRange     '1.3.3',
+28 silly addNameRange     '1.4.0',
+28 silly addNameRange     '1.4.1',
+28 silly addNameRange     '1.4.2-rc1',
+28 silly addNameRange     '1.4.2',
+28 silly addNameRange     '1.4.3' ] ]
+29 verbose addNamed [ 'divshot-cli', '1.4.3' ]
+30 verbose addNamed [ '1.4.3', '1.4.3' ]
+31 silly lockFile 8d45dac8-divshot-cli-1-4-3 divshot-cli@1.4.3
+32 verbose lock divshot-cli@1.4.3 /Users/olliekav/.npm/8d45dac8-divshot-cli-1-4-3.lock
+33 silly lockFile 00230574-ivshot-cli-divshot-cli-1-4-3-tgz https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz
+34 verbose lock https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz /Users/olliekav/.npm/00230574-ivshot-cli-divshot-cli-1-4-3-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz',
+35 verbose addRemoteTarball   '362058ce301ea8c3c09ba6071dc0a9423ae5515c' ]
+36 info retry fetch attempt 1 at 15:41:56
+37 verbose fetch to= /var/folders/8j/_g60pkf92zb3t85vk44vk1w80000gn/T/npm-2151-s10qLot1/registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz
+38 http GET https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz
+39 http 200 https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz
+40 silly lockFile 00230574-ivshot-cli-divshot-cli-1-4-3-tgz https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz
+41 silly lockFile 00230574-ivshot-cli-divshot-cli-1-4-3-tgz https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz
+42 silly lockFile 8d45dac8-divshot-cli-1-4-3 divshot-cli@1.4.3
+43 silly lockFile 8d45dac8-divshot-cli-1-4-3 divshot-cli@1.4.3
+44 silly lockFile f57fbc2c-divshot-cli divshot-cli@
+45 silly lockFile f57fbc2c-divshot-cli divshot-cli@
+46 silly resolved [ { name: 'divshot-cli',
+46 silly resolved     description: 'CLI for Divshot',
+46 silly resolved     version: '1.4.3',
+46 silly resolved     engines: { node: '<0.10.33 >0.10.34', engineStrict: true },
+46 silly resolved     dependencies:
+46 silly resolved      { async: '^0.9.0',
+46 silly resolved        booly: '^1.0.2',
+46 silly resolved        bytes: '^1.0.0',
+46 silly resolved        chalk: '~0.5.1',
+46 silly resolved        clone: '^0.1.18',
+46 silly resolved        'copy-files': '^0.1.0',
+46 silly resolved        'cozy-slug': '0.2.2',
+46 silly resolved        'divshot-api': '0.8.1',
+46 silly resolved        'divshot-push': '1.0.3',
+46 silly resolved        feedback: '^0.3.2',
+46 silly resolved        'home-dir': '^0.2.0',
+46 silly resolved        inquirer: '^0.8.0',
+46 silly resolved        'join-path': '^1.0.0',
+46 silly resolved        jsonlint: '^1.6.2',
+46 silly resolved        lodash: '^2.4.1',
+46 silly resolved        marked: '^0.3.2',
+46 silly resolved        'marked-terminal': '^1.1.1',
+46 silly resolved        'merkle-dir': 'git://github.com/divshot/merkle-dir',
+46 silly resolved        'mime-types': '^2.0.2',
+46 silly resolved        mkdirp: '0.5.x',
+46 silly resolved        moment: '^2.8.3',
+46 silly resolved        nash: '0.3.x',
+46 silly resolved        open: '0.0.5',
+46 silly resolved        pluralize: '^1.0.3',
+46 silly resolved        progress: '^1.1.8',
+46 silly resolved        promptly: '^0.2.0',
+46 silly resolved        read: '^1.0.5',
+46 silly resolved        regular: '^0.1.6',
+46 silly resolved        request: '^2.44.0',
+46 silly resolved        sizer: '^0.1.1',
+46 silly resolved        slash: '^1.0.0',
+46 silly resolved        superstatic: '1.1.6',
+46 silly resolved        touch: '0.0.3',
+46 silly resolved        'update-notifier': '^0.2.2',
+46 silly resolved        writestreamp: '^0.1.0' },
+46 silly resolved     devDependencies:
+46 silly resolved      { sinon: '~1.7.3',
+46 silly resolved        mocksy: '~0.1.4',
+46 silly resolved        mocha: '~1.14.0',
+46 silly resolved        'expect.js': '~0.2.0',
+46 silly resolved        jshint: '~2.3.0' },
+46 silly resolved     scripts: { test: 'mocha --recursive --reporter spec ./test' },
+46 silly resolved     author: { name: 'Divshot' },
+46 silly resolved     homepage: 'http://divshot.com',
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'https://github.com/divshot/divshot-cli.git' },
+46 silly resolved     bugs: { url: 'https://github.com/divshot/divshot-cli/issues' },
+46 silly resolved     keywords: [ 'divshot', 'hosting', 'static' ],
+46 silly resolved     preferGlobal: 'true',
+46 silly resolved     bin: { divshot: 'bin/divshot.js' },
+46 silly resolved     main: 'bin/divshot.js',
+46 silly resolved     gitHead: 'e747088dc6073dc8510a7cea422cb93d805c83d1',
+46 silly resolved     _id: 'divshot-cli@1.4.3',
+46 silly resolved     _shasum: '362058ce301ea8c3c09ba6071dc0a9423ae5515c',
+46 silly resolved     _from: 'divshot-cli@',
+46 silly resolved     _npmVersion: '2.1.11',
+46 silly resolved     _nodeVersion: '0.10.31',
+46 silly resolved     _npmUser: { name: 'scottcorgan', email: 'scottcorgan@gmail.com' },
+46 silly resolved     maintainers: [ [Object], [Object] ],
+46 silly resolved     dist:
+46 silly resolved      { shasum: '362058ce301ea8c3c09ba6071dc0a9423ae5515c',
+46 silly resolved        tarball: 'http://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz' },
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/divshot-cli/-/divshot-cli-1.4.3.tgz' } ]
+47 info install divshot-cli@1.4.3 into /usr/local/lib
+48 info installOne divshot-cli@1.4.3
+49 warn engine divshot-cli@1.4.3: wanted: {"node":"<0.10.33 >0.10.34","engineStrict":true} (current: {"node":"0.10.33","npm":"1.4.28"})
+50 verbose lib/node_modules/divshot-cli unbuild
+51 verbose tar unpack /Users/olliekav/.npm/divshot-cli/1.4.3/package.tgz
+52 silly lockFile d9fae03e-cal-lib-node-modules-divshot-cli tar:///usr/local/lib/node_modules/divshot-cli
+53 verbose lock tar:///usr/local/lib/node_modules/divshot-cli /Users/olliekav/.npm/d9fae03e-cal-lib-node-modules-divshot-cli.lock
+54 silly lockFile 024caa31-pm-divshot-cli-1-4-3-package-tgz tar:///Users/olliekav/.npm/divshot-cli/1.4.3/package.tgz
+55 verbose lock tar:///Users/olliekav/.npm/divshot-cli/1.4.3/package.tgz /Users/olliekav/.npm/024caa31-pm-divshot-cli-1-4-3-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 error Error: EACCES, mkdir '/usr/local/lib/node_modules/divshot-cli'
+57 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/divshot-cli']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/local/lib/node_modules/divshot-cli',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/local/lib/node_modules/divshot-cli',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:107:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Darwin 14.1.0
+60 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "divshot-cli"
+61 error cwd /Users/olliekav/Rails/ollieandkat.com
+62 error node -v v0.10.33
+63 error npm -v 1.4.28
+64 error path /usr/local/lib/node_modules/divshot-cli
+65 error fstream_path /usr/local/lib/node_modules/divshot-cli
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/divshot-cli'
+71 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:107:15)
+72 verbose exit [ 3, true ]
