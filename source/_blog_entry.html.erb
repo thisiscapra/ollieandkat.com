@@ -8,6 +8,9 @@
     <div itemprop="articleBody">
       <%= article.body %>
     </div>
+    <% if article.metadata[:page]['author'] %>
+      <div class="author">Written by: <span itemprop="author"><%= article.metadata[:page]['author'] %></span></div>
+    <% end %>
     <% if article.tags %>
       <%= sentence_tag_list(article) %>
     <% end %>
