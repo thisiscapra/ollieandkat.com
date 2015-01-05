@@ -75,7 +75,7 @@ helpers do
     if content_for?(:description)
       "#{yield_content(:description)}"
     else
-      ""
+      "We are Ollie &amp; Kat, and this is our blog about moving to Canada and documenting our travels and experiences."
     end
   end
   # Active nav items
