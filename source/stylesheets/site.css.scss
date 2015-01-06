@@ -239,6 +239,13 @@ article {
   }
   .body {
     padding-top: 2em;
+    ul {
+      margin: 0 0 1.5em 3em;
+      width: 80%;
+      li {
+        margin-bottom: 1em;
+      }
+    }
   }
   .tags, .author {
     color: #999;
@@ -249,12 +256,15 @@ article {
   p:first-of-type {
     font-size: 1.2em;
     &:first-letter {
+      background-color: $green;
+      color: #fff;
       font-family:$archer;
       float: left;
-      line-height: 0.55;
+      line-height: 0.65;
       font-size: 3em;
       font-weight: 800;
-      margin: 12px 0.2em 0 0;
+      margin: 14px 0.2em 0 0;
+      padding: 0.3em 0.2em;
       @media screen and (max-width: 800px) {
          margin: 9px 0.2em 0 0;
       }
