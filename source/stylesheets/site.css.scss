@@ -283,11 +283,12 @@ article {
     word-spacing: 0;
     width: 50%;
     @include box-sizing(border-box);
-    &.first-child {
+    &:nth-child(1) {
       padding-right: 1em;
     }
-    &.last-child {
+    &:nth-child(2) {
       padding-left: 1em;
+      text-align: right;
     }
     @media screen and (max-width: 400px) {
       display: block;
