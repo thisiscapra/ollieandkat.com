@@ -19,6 +19,7 @@ I have two windows growing now, one with shelves and a [3W LED growlight](http:/
 ![my led lit garden](https://dl.dropboxusercontent.com/u/4461726/ollie-and-kat/led.jpg)
 
 I was pleased to have a few tomatoes growing, nice lettuce and some radishes for harvesting before leaving to go to England for 10 days.  
+
 ![my radish](https://dl.dropboxusercontent.com/u/4461726/ollie-and-kat/radish.jpg)
 
 Luckily, I had someone come in and water twice, but my plants were pretty sad when I came back.  I tend to them every day, pruning and checking their water needs, so it is definitely not a low-maintenance endeavour! 
