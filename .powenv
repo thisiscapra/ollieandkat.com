@@ -1,8 +1,0 @@
-export PATH="/Users/olliekav/.rvm/gems/ruby-2.1.5@ollieandkat/bin:/Users/olliekav/.rvm/gems/ruby-2.1.5@global/bin:/Users/olliekav/.rvm/rubies/ruby-2.1.5/bin:$PATH"
-export GEM_HOME='/Users/olliekav/.rvm/gems/ruby-2.1.5@ollieandkat'
-export GEM_PATH='/Users/olliekav/.rvm/gems/ruby-2.1.5@ollieandkat:/Users/olliekav/.rvm/gems/ruby-2.1.5@global'
-export MY_RUBY_HOME='/Users/olliekav/.rvm/rubies/ruby-2.1.5'
-export IRBRC='/Users/olliekav/.rvm/rubies/ruby-2.1.5/.irbrc'
-unset MAGLEV_HOME
-unset RBXOPT
-export RUBY_VERSION='ruby-2.1.5'
